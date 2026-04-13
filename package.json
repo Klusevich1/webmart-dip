@@ -1,0 +1,23 @@
+{
+  "name": "webmart-monorepo",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run start:dev",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "start:client": "cd client && npm run start",
+    "start:server": "cd server && npm run start:prod",
+    "seed": "cd server && npm run seed",
+    "install:all": "npm install",
+    "clean": "rimraf node_modules client/node_modules server/node_modules packages/*/node_modules"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5"
+  }
+}

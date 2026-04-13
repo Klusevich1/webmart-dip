@@ -1,0 +1,97 @@
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    container_name: webmart-db
+    environment:
+      POSTGRES_DB: webmart
+      POSTGRES_USER: webmart
+      POSTGRES_PASSWORD: webmart123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U webmart -d webmart"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+  # Backend API
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: webmart-backend
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - DB_TYPE=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USERNAME=webmart
+      - DB_PASSWORD=webmart123
+      - DB_DATABASE=webmart
+      - FRONTEND_URL=http://localhost:3000
+      - PORT=3001
+      - AUTO_SEED=true
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: webmart-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3001
+    depends_on:
+      - backend
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Database seeding service (run once after first setup)
+  seed-db:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: webmart-seed
+    command: sh -c "cd server && npm run seed"
+    environment:
+      - NODE_ENV=production
+      - DB_TYPE=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USERNAME=webmart
+      - DB_PASSWORD=webmart123
+      - DB_DATABASE=webmart
+    depends_on:
+      db:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    profiles:
+      - seed
+    restart: "no"
+
+volumes:
+  postgres_data:

@@ -1,0 +1,57 @@
+# Client Dockerfile
+FROM node:18-alpine AS client-builder
+
+WORKDIR /app/client
+
+# Copy client package files
+COPY client/package*.json ./
+
+# Install all client dependencies (including dev dependencies for build)
+RUN npm install
+
+# Copy client source
+COPY client/ ./
+
+# Copy shared packages if needed
+COPY packages/ ../packages/
+
+# Build client
+RUN npm run build
+
+# Install only production dependencies
+RUN npm install --production
+
+# Production image
+FROM node:18-alpine AS production
+
+# Install dumb-init for proper signal handling
+RUN apk add --no-cache dumb-init curl
+
+# Create app directory
+WORKDIR /app
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S webmart -u 1001
+
+# Copy client production files
+COPY --from=client-builder --chown=webmart:nodejs /app/client/.next ./client/.next
+COPY --from=client-builder --chown=webmart:nodejs /app/client/node_modules ./client/node_modules
+COPY --from=client-builder --chown=webmart:nodejs /app/client/package*.json ./client/
+COPY --from=client-builder --chown=webmart:nodejs /app/client/public ./client/public
+COPY --from=client-builder --chown=webmart:nodejs /app/client/next.config.js ./client/
+COPY --from=client-builder --chown=webmart:nodejs /app/client/next-env.d.ts ./client/
+
+# Switch to non-root user
+USER webmart
+
+# Expose port
+EXPOSE 3000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:3000 || exit 1
+
+# Start client
+CMD ["dumb-init", "sh", "-c", "cd client && npm start"]
+

@@ -1,0 +1,53 @@
+# базовое игнорирование node/npm/workspaces/IDE всего лишнего для JS monorepo
+
+# 1. Node dependencies / build
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+.next/
+out/
+coverage/
+lib/
+.eslintcache
+
+# 2. Local env / secrets
+.env
+.env.*
+!.env.example
+server/.env
+client/.env.local
+client/.env.*.local
+!client/.env.example
+!important.txt
+
+# 3. IDE/editor junk
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vscode/
+
+# 4. OS stuff
+*.log
+
+# 5. Other misc
+*.test.db
+*.sqlite
+.cache/
+
+# 6. Package manager lock/backup (if unwanted)
+package-lock.json
+
+# 7. Postgres/DB dump files
+*.dump
+*.backup
+*.bak

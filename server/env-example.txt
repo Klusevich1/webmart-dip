@@ -15,11 +15,13 @@ FRONTEND_URL=http://localhost:3000
 # Email settings (configure with your SMTP provider)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
+# Для порта 465 secure включается автоматически; иначе можно задать SMTP_SECURE=true/false
 SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
 SMTP_FROM=your-email@gmail.com
 
-# Agency email (where notifications are sent)
+# Куда приходят письма с форм и квиза (приоритет: NOTIFICATION_EMAIL → AGENCY_EMAIL → SMTP_USER)
+NOTIFICATION_EMAIL=
 AGENCY_EMAIL=webmart@site.com
 
 # Environment

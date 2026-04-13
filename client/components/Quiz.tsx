@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import PhoneInput from "@/components/PhoneInput";
+import { isBelarusPhoneComplete } from "@/lib/phoneMask";
 
 interface QuizData {
   designType: string;
@@ -142,11 +144,11 @@ const Quiz = () => {
       // Преобразуем данные для отправки на сервер
       const submissionData = {
         answers: {
-          businessType: quizData.businessType,
+          designType: quizData.designType,
+          format: quizData.format,
+          purposes: quizData.purposes,
           budget: quizData.budget,
-          services: quizData.services,
           timeline: quizData.timeline,
-          goals: quizData.goals,
         },
         contactMethod: quizData.contactMethod === "По телефону"
           ? "phone"
@@ -255,15 +257,13 @@ const Quiz = () => {
             <label className="block text-white text-opacity-80 mb-2">
               Телефон *
             </label>
-            <input
-              type="tel"
+            <PhoneInput
               value={quizData.phone}
-              onChange={(e) =>
-                setQuizData((prev) => ({ ...prev, phone: e.target.value }))
+              onChange={(phone) =>
+                setQuizData((prev) => ({ ...prev, phone }))
               }
-              className="input-field"
-              placeholder="+375 (__) ___-__-__"
               required
+              className="input-field w-full"
             />
           </div>
 
@@ -273,7 +273,11 @@ const Quiz = () => {
             </button>
             <button
               onClick={handleSubmit}
-              disabled={isLoading || !quizData.name || !quizData.phone}
+              disabled={
+                isLoading ||
+                !quizData.name ||
+                !isBelarusPhoneComplete(quizData.phone)
+              }
               className="btn-primary flex-1 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Отправка..." : "Отправить"}

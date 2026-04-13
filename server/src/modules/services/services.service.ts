@@ -194,7 +194,7 @@ export class ServicesService {
         categoryId: contextAdsCategory.id,
         name: 'Настройка и ведение рекламных кампаний в Яндекс.Директ',
         slug: 'yandex-direct-setup',
-        shortDescription: 'Профессиональная настройка и управление рекламными кампаниями в Яндекс.Директ. Бюджет от 1000 BYN.',
+        shortDescription: 'Профессиональная настройка и управление рекламными кампаниями в Яндекс.Директ. Рекламный бюджет обсуждается отдельно.',
         fullDescription: 'Реклама в Яндекс Директ является мощным инструментом для бизнеса, который можно адаптировать под разные бюджеты и цели, обеспечивая широкие возможности для роста и развития. Мы проводим комплексную настройку и ведение кампаний: анализ ключевых слов и семантики, создание продающих объявлений, настройку таргетинга и ретаргетинга, оптимизацию бюджета и ставок, ежедневный мониторинг и детальную отчётность.',
         features: [
           'Анализ ключевых слов и семантики',
@@ -213,7 +213,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 30 000 BYN/мес',
+            price: '1 890 BYN/мес',
             features: [
               'До 50 ключевых слов',
               'Базовая оптимизация',
@@ -222,7 +222,7 @@ export class ServicesService {
           },
           {
             name: 'Стандарт',
-            price: 'от 60 000 BYN/мес',
+            price: '3 590 BYN/мес',
             features: [
               'До 200 ключевых слов',
               'Расширенная оптимизация',
@@ -232,7 +232,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 120 000 BYN/мес',
+            price: '7 190 BYN/мес',
             features: [
               'Безлимит ключевых слов',
               'Полная автоматизация',
@@ -246,7 +246,7 @@ export class ServicesService {
         categoryId: contextAdsCategory.id,
         name: 'Настройка и ведение рекламных кампаний в Google Ads',
         slug: 'google-ads-setup',
-        shortDescription: 'Профессиональная настройка и управление рекламными кампаниями в Google Ads. Бюджет от 1000 BYN.',
+        shortDescription: 'Профессиональная настройка и управление рекламными кампаниями в Google Ads. Рекламный бюджет обсуждается отдельно.',
         fullDescription: 'Контекстная реклама в Google Ads позволяет компаниям размещать объявления в поисковой выдаче Google и на партнёрских сайтах. Система предлагает множество возможностей: от гибкого таргетирования до детализированной аналитики. Google Ads является мощным и гибким инструментом для бизнеса, обеспечивая широкий охват аудитории и эффективное продвижение товаров и услуг.',
         features: [
           'Анализ рынка и конкурентов',
@@ -265,7 +265,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 35 000 BYN/мес',
+            price: '2 190 BYN/мес',
             features: [
               'До 50 ключевых слов',
               'Базовая оптимизация',
@@ -274,7 +274,7 @@ export class ServicesService {
           },
           {
             name: 'Стандарт',
-            price: 'от 70 000 BYN/мес',
+            price: '4 190 BYN/мес',
             features: [
               'До 200 ключевых слов',
               'Расширенная оптимизация',
@@ -284,7 +284,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 140 000 BYN/мес',
+            price: '8 390 BYN/мес',
             features: [
               'Безлимит ключевых слов',
               'Smart кампании',
@@ -317,7 +317,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Экспресс-аудит',
-            price: '15 000 BYN',
+            price: '690 BYN',
             features: [
               'Анализ 1-2 кампаний',
               'Базовый отчет',
@@ -326,7 +326,7 @@ export class ServicesService {
           },
           {
             name: 'Полный аудит',
-            price: '35 000 BYN',
+            price: '1 490 BYN',
             features: [
               'Анализ всех кампаний',
               'Детальный отчет',
@@ -359,7 +359,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Базовая настройка',
-            price: '5 000 BYN',
+            price: '190 BYN',
             features: [
               'Настройка автопополнения',
               'Базовый мониторинг',
@@ -368,7 +368,7 @@ export class ServicesService {
           },
           {
             name: 'Расширенная настройка',
-            price: '15 000 BYN',
+            price: '590 BYN',
             features: [
               'Автопополнение + оптимизация',
               'Расширенный мониторинг',
@@ -403,7 +403,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 25 000 BYN/мес',
+            price: '1 590 BYN/мес',
             features: [
               'До 50 товаров',
               'Базовая оптимизация',
@@ -412,7 +412,7 @@ export class ServicesService {
           },
           {
             name: 'Бизнес',
-            price: 'от 50 000 BYN/мес',
+            price: '2 990 BYN/мес',
             features: [
               'До 200 товаров',
               'Полная оптимизация',
@@ -422,7 +422,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 100 000 BYN/мес',
+            price: '5 990 BYN/мес',
             features: [
               'Безлимит товаров',
               'Комплексное продвижение',
@@ -455,7 +455,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 30 000 BYN/мес',
+            price: '1 890 BYN/мес',
             features: [
               'До 50 товаров',
               'Базовая оптимизация',
@@ -464,7 +464,7 @@ export class ServicesService {
           },
           {
             name: 'Бизнес',
-            price: 'от 60 000 BYN/мес',
+            price: '3 590 BYN/мес',
             features: [
               'До 200 товаров',
               'Полная оптимизация',
@@ -474,7 +474,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 120 000 BYN/мес',
+            price: '7 190 BYN/мес',
             features: [
               'Безлимит товаров',
               'Комплексное продвижение',
@@ -509,7 +509,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Базовый',
-            price: 'от 25 000 BYN/мес',
+            price: '1 590 BYN/мес',
             features: [
               'Анализ конкурентов',
               'Оптимизация метаданных',
@@ -518,7 +518,7 @@ export class ServicesService {
           },
           {
             name: 'Расширенный',
-            price: 'от 50 000 BYN/мес',
+            price: '2 990 BYN/мес',
             features: [
               'Полная ASO оптимизация',
               'Создание скриншотов',
@@ -528,7 +528,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 100 000 BYN/мес',
+            price: '5 990 BYN/мес',
             features: [
               'Комплексная оптимизация',
               'A/B тестирование',
@@ -563,7 +563,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 45 000 BYN/мес',
+            price: '2 790 BYN/мес',
             features: [
               'До 30 страниц',
               'Базовая оптимизация',
@@ -572,7 +572,7 @@ export class ServicesService {
           },
           {
             name: 'Бизнес',
-            price: 'от 90 000 BYN/мес',
+            price: '5 390 BYN/мес',
             features: [
               'До 100 страниц',
               'Полная оптимизация',
@@ -582,7 +582,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 180 000 BYN/мес',
+            price: '10 790 BYN/мес',
             features: [
               'Безлимит страниц',
               'Комплексная оптимизация',
@@ -615,7 +615,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 40 000 BYN/мес',
+            price: '2 490 BYN/мес',
             features: [
               'До 30 страниц',
               'Базовая оптимизация',
@@ -624,7 +624,7 @@ export class ServicesService {
           },
           {
             name: 'Бизнес',
-            price: 'от 80 000 BYN/мес',
+            price: '4 790 BYN/мес',
             features: [
               'До 100 страниц',
               'Полная оптимизация',
@@ -634,7 +634,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 160 000 BYN/мес',
+            price: '9 590 BYN/мес',
             features: [
               'Безлимит страниц',
               'Комплексная оптимизация',
@@ -667,7 +667,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Базовая оптимизация',
-            price: 'от 50 000 BYN',
+            price: '2 900 BYN',
             features: [
               'До 50 страниц',
               'Техническая оптимизация',
@@ -676,7 +676,7 @@ export class ServicesService {
           },
           {
             name: 'Комплексная оптимизация',
-            price: 'от 100 000 BYN',
+            price: '5 900 BYN',
             features: [
               'До 100 страниц',
               'Полная техническая оптимизация',
@@ -686,7 +686,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум оптимизация',
-            price: 'от 200 000 BYN',
+            price: '11 900 BYN',
             features: [
               'Безлимит страниц',
               'Глубокая техническая оптимизация',
@@ -719,7 +719,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 35 000 BYN/мес',
+            price: '2 190 BYN/мес',
             features: [
               'Базовый анализ трафика',
               'Оптимизация 20 страниц',
@@ -728,7 +728,7 @@ export class ServicesService {
           },
           {
             name: 'Стандарт',
-            price: 'от 70 000 BYN/мес',
+            price: '4 190 BYN/мес',
             features: [
               'Детальный анализ трафика',
               'Оптимизация 50 страниц',
@@ -738,7 +738,7 @@ export class ServicesService {
           },
           {
             name: 'Максимум',
-            price: 'от 140 000 BYN/мес',
+            price: '8 390 BYN/мес',
             features: [
               'Полный аудит трафика',
               'Оптимизация всего сайта',
@@ -771,7 +771,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Базовый',
-            price: 'от 40 000 BYN/мес',
+            price: '2 490 BYN/мес',
             features: [
               'Мониторинг 50 запросов',
               'Базовая оптимизация',
@@ -780,7 +780,7 @@ export class ServicesService {
           },
           {
             name: 'Стандарт',
-            price: 'от 80 000 BYN/мес',
+            price: '4 790 BYN/мес',
             features: [
               'Мониторинг 150 запросов',
               'Полная оптимизация',
@@ -790,7 +790,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 160 000 BYN/мес',
+            price: '9 590 BYN/мес',
             features: [
               'Мониторинг 300+ запросов',
               'Комплексная оптимизация',
@@ -823,7 +823,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 45 000 BYN/мес',
+            price: '2 790 BYN/мес',
             features: [
               'Оптимизация 10 страниц',
               'Базовый анализ конверсии',
@@ -832,7 +832,7 @@ export class ServicesService {
           },
           {
             name: 'Бизнес',
-            price: 'от 90 000 BYN/мес',
+            price: '5 390 BYN/мес',
             features: [
               'Оптимизация 30 страниц',
               'Детальный анализ конверсии',
@@ -842,7 +842,7 @@ export class ServicesService {
           },
           {
             name: 'Корпорация',
-            price: 'от 180 000 BYN/мес',
+            price: '10 790 BYN/мес',
             features: [
               'Полная оптимизация сайта',
               'Комплексный анализ конверсии',
@@ -875,7 +875,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Базовый запуск',
-            price: 'от 30 000 BYN/мес',
+            price: '1 890 BYN/мес',
             features: [
               'Вывод из-под фильтров',
               'Базовая оптимизация',
@@ -884,7 +884,7 @@ export class ServicesService {
           },
           {
             name: 'Стандартный запуск',
-            price: 'от 60 000 BYN/мес',
+            price: '3 590 BYN/мес',
             features: [
               'Приоритетный вывод из фильтров',
               'Полная оптимизация',
@@ -894,7 +894,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум запуск',
-            price: 'от 120 000 BYN/мес',
+            price: '7 190 BYN/мес',
             features: [
               'Экстренный вывод из фильтров',
               'Комплексная оптимизация',
@@ -927,7 +927,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Магазин-Старт',
-            price: 'от 50 000 BYN/мес',
+            price: '2 990 BYN/мес',
             features: [
               'До 500 товаров',
               'Базовая оптимизация',
@@ -936,7 +936,7 @@ export class ServicesService {
           },
           {
             name: 'Магазин-Бизнес',
-            price: 'от 100 000 BYN/мес',
+            price: '5 990 BYN/мес',
             features: [
               'До 2000 товаров',
               'Полная оптимизация',
@@ -946,7 +946,7 @@ export class ServicesService {
           },
           {
             name: 'Магазин-Премиум',
-            price: 'от 200 000 BYN/мес',
+            price: '11 990 BYN/мес',
             features: [
               'Безлимит товаров',
               'Комплексная оптимизация',
@@ -979,7 +979,7 @@ export class ServicesService {
         packages: [
           {
             name: 'СНГ-Старт',
-            price: 'от 60 000 BYN/мес',
+            price: '3 590 BYN/мес',
             features: [
               '2-3 страны',
               'Базовая локализация',
@@ -988,7 +988,7 @@ export class ServicesService {
           },
           {
             name: 'СНГ-Бизнес',
-            price: 'от 120 000 BYN/мес',
+            price: '7 190 BYN/мес',
             features: [
               '5+ стран',
               'Полная локализация',
@@ -998,7 +998,7 @@ export class ServicesService {
           },
           {
             name: 'СНГ-Премиум',
-            price: 'от 250 000 BYN/мес',
+            price: '14 900 BYN/мес',
             features: [
               'Все страны СНГ',
               'Комплексная локализация',
@@ -1031,7 +1031,7 @@ export class ServicesService {
         packages: [
           {
             name: 'International-Start',
-            price: 'от 80 000 BYN/мес',
+            price: '4 790 BYN/мес',
             features: [
               'Базовая глобальная оптимизация',
               'Международное ссылочное',
@@ -1040,7 +1040,7 @@ export class ServicesService {
           },
           {
             name: 'International-Business',
-            price: 'от 160 000 BYN/мес',
+            price: '9 590 BYN/мес',
             features: [
               'Полная глобальная оптимизация',
               'Расширенное ссылочное',
@@ -1050,7 +1050,7 @@ export class ServicesService {
           },
           {
             name: 'International-Premium',
-            price: 'от 320 000 BYN/мес',
+            price: '18 900 BYN/мес',
             features: [
               'Комплексная глобальная оптимизация',
               'Премиум ссылочное продвижение',
@@ -1083,7 +1083,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Экспресс снятие',
-            price: 'от 30 000 BYN',
+            price: '1 750 BYN',
             features: [
               'Анализ санкций',
               'Базовый план реабилитации',
@@ -1092,7 +1092,7 @@ export class ServicesService {
           },
           {
             name: 'Стандартная реабилитация',
-            price: 'от 70 000 BYN',
+            price: '3 800 BYN',
             features: [
               'Детальный анализ',
               'Комплексный план реабилитации',
@@ -1102,7 +1102,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум реабилитация',
-            price: 'от 150 000 BYN',
+            price: '7 900 BYN',
             features: [
               'Глубокий анализ всех факторов',
               'Индивидуальный план реабилитации',
@@ -1136,7 +1136,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Базовый аудит',
-            price: '25 000 BYN',
+            price: '590 BYN',
             features: [
               'Техническая диагностика',
               'Базовый анализ контента',
@@ -1145,7 +1145,7 @@ export class ServicesService {
           },
           {
             name: 'Расширенный аудит',
-            price: '50 000 BYN',
+            price: '1 190 BYN',
             features: [
               'Полная техническая диагностика',
               'Детальный анализ контента',
@@ -1156,7 +1156,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум аудит',
-            price: '100 000 BYN',
+            price: '2 390 BYN',
             features: [
               'Глубокий технический аудит',
               'Комплексный анализ всех факторов',
@@ -1174,7 +1174,7 @@ export class ServicesService {
         categoryId: targetedAdsCategory.id,
         name: 'Реклама в Facebook',
         slug: 'facebook-ads',
-        shortDescription: 'Таргетированная реклама в Facebook. Бюджет от 500 BYN.',
+        shortDescription: 'Таргетированная реклама в Facebook. Рекламный бюджет обсуждается отдельно.',
         fullDescription: 'Делаем рекламу в Facebook. В отличие от контекстной рекламы, таргетинг в соцсетях ориентируется не на ключевые слова, а на портреты клиентов. Реклама выглядит как обычный пост или сторис и органично вписывается в ленту. Внимательно относимся к особенностям бизнеса каждого клиента — учтём все ваши пожелания и воплотим их в жизнь.',
         features: [
           'Анализ целевой аудитории',
@@ -1193,7 +1193,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 25 000 BYN/мес',
+            price: '1 590 BYN/мес',
             features: [
               '1 рекламная кампания',
               'Базовый таргетинг',
@@ -1202,7 +1202,7 @@ export class ServicesService {
           },
           {
             name: 'Стандарт',
-            price: 'от 50 000 BYN/мес',
+            price: '2 990 BYN/мес',
             features: [
               '3 рекламные кампании',
               'Расширенный таргетинг',
@@ -1212,7 +1212,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 100 000 BYN/мес',
+            price: '5 990 BYN/мес',
             features: [
               'Безлимит кампаний',
               'Комплексный таргетинг',
@@ -1245,7 +1245,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Базовый',
-            price: 'от 30 000 BYN/мес',
+            price: '1 890 BYN/мес',
             features: [
               'Базовая реклама в ленте',
               'Простой таргетинг',
@@ -1254,7 +1254,7 @@ export class ServicesService {
           },
           {
             name: 'Расширенный',
-            price: 'от 60 000 BYN/мес',
+            price: '3 590 BYN/мес',
             features: [
               'Мультиформатная реклама',
               'Расширенный таргетинг',
@@ -1264,7 +1264,7 @@ export class ServicesService {
           },
           {
             name: 'Максимум',
-            price: 'от 120 000 BYN/мес',
+            price: '7 190 BYN/мес',
             features: [
               'Полный спектр форматов',
               'Комплексный таргетинг',
@@ -1297,7 +1297,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 35 000 BYN/мес',
+            price: '2 190 BYN/мес',
             features: [
               'Базовая видео-реклама',
               'Простой таргетинг',
@@ -1306,7 +1306,7 @@ export class ServicesService {
           },
           {
             name: 'Бизнес',
-            price: 'от 70 000 BYN/мес',
+            price: '4 190 BYN/мес',
             features: [
               'Расширенная реклама',
               'Spark Ads',
@@ -1316,7 +1316,7 @@ export class ServicesService {
           },
           {
             name: 'Вирусный',
-            price: 'от 140 000 BYN/мес',
+            price: '8 390 BYN/мес',
             features: [
               'Полный спектр форматов',
               'Комплексный таргетинг',
@@ -1349,7 +1349,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Базовый',
-            price: 'от 20 000 BYN/мес',
+            price: '1 290 BYN/мес',
             features: [
               'Базовая реклама',
               'Демографический таргетинг',
@@ -1358,7 +1358,7 @@ export class ServicesService {
           },
           {
             name: 'Стандарт',
-            price: 'от 40 000 BYN/мес',
+            price: '2 490 BYN/мес',
             features: [
               'Расширенная реклама',
               'Поведенческий таргетинг',
@@ -1368,7 +1368,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 80 000 BYN/мес',
+            price: '4 790 BYN/мес',
             features: [
               'Комплексные кампании',
               'Мультиформатная реклама',
@@ -1401,7 +1401,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 25 000 BYN/мес',
+            price: '1 590 BYN/мес',
             features: [
               '1 рекламная кампания',
               'Базовый таргетинг',
@@ -1410,7 +1410,7 @@ export class ServicesService {
           },
           {
             name: 'Бизнес',
-            price: 'от 50 000 BYN/мес',
+            price: '2 990 BYN/мес',
             features: [
               '3 рекламные кампании',
               'Расширенный таргетинг',
@@ -1420,7 +1420,7 @@ export class ServicesService {
           },
           {
             name: 'VIP',
-            price: 'от 100 000 BYN/мес',
+            price: '5 990 BYN/мес',
             features: [
               'Безлимит кампаний',
               'Комплексный таргетинг',
@@ -1436,7 +1436,7 @@ export class ServicesService {
         categoryId: designCategory.id,
         name: 'Motion-дизайн',
         slug: 'motion-design',
-        shortDescription: 'Motion-дизайн — анимированные рекламные видеоролики. От 400 BYN.',
+        shortDescription: 'Motion-дизайн — анимированные рекламные видеоролики. Стоимость по тарифам ниже.',
         fullDescription: 'Motion-дизайн — это анимированные рекламные видеоролики. Во многих роликах добавляют звук, чтобы задействовать слуховой канал восприятия. На сегодня motion — наиболее эффективный рекламный формат для привлечения внимания пользователей. Создаём анимированные логотипы, видео-презентации, интерактивные элементы и вирусный контент.',
         features: [
           '2D и 3D анимация',
@@ -1455,7 +1455,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Базовый',
-            price: 'от 15 000 BYN',
+            price: '1 450 BYN',
             features: [
               'Простая 2D анимация',
               'До 30 секунд',
@@ -1464,7 +1464,7 @@ export class ServicesService {
           },
           {
             name: 'Стандарт',
-            price: 'от 35 000 BYN',
+            price: '2 900 BYN',
             features: [
               'Расширенная 2D анимация',
               'До 60 секунд',
@@ -1474,7 +1474,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 70 000 BYN',
+            price: '5 800 BYN',
             features: [
               '2D/3D анимация',
               'До 120 секунд',
@@ -1488,7 +1488,7 @@ export class ServicesService {
         categoryId: designCategory.id,
         name: 'Создание рекламных креативов',
         slug: 'advertising-creatives',
-        shortDescription: 'Статика, GIF, HTML-баннеры. Создаём дизайн в формате PNG/JPEG. От 150 BYN.',
+        shortDescription: 'Статика, GIF, HTML-баннеры. Создаём дизайн в формате PNG/JPEG. Стоимость по тарифам ниже.',
         fullDescription: 'Создаём дизайн для продукта в формате PNG или JPEG. Используем креативный подход, который вовлекает в продукт и вызывает эмоции у аудитории. GIF-баннер — анимированное изображение из нескольких кадров, более впечатляющее за счёт динамических элементов. HTML5-баннеры — адаптируются под любые устройства. Результат — проект, который привлекает внимание и конвертирует.',
         features: [
           'Баннеры всех форматов',
@@ -1507,7 +1507,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Мини',
-            price: 'от 5 000 BYN',
+            price: '480 BYN',
             features: [
               '3 баннера',
               'Базовый дизайн',
@@ -1516,7 +1516,7 @@ export class ServicesService {
           },
           {
             name: 'Стандарт',
-            price: 'от 15 000 BYN',
+            price: '1 190 BYN',
             features: [
               '10 баннеров',
               'Профессиональный дизайн',
@@ -1526,7 +1526,7 @@ export class ServicesService {
           },
           {
             name: 'Максимум',
-            price: 'от 35 000 BYN',
+            price: '2 490 BYN',
             features: [
               'Безлимит баннеров',
               'Полный брендинг',
@@ -1560,7 +1560,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Landing Page',
-            price: 'от 50 000 BYN',
+            price: '4 900 BYN',
             features: [
               'Дизайн 1 страницы',
               'Базовое исследование',
@@ -1570,7 +1570,7 @@ export class ServicesService {
           },
           {
             name: 'Веб-приложение',
-            price: 'от 150 000 BYN',
+            price: '14 500 BYN',
             features: [
               'Дизайн до 10 экранов',
               'Полное исследование UX',
@@ -1581,7 +1581,7 @@ export class ServicesService {
           },
           {
             name: 'Корпоративная система',
-            price: 'от 300 000 BYN',
+            price: '28 900 BYN',
             features: [
               'Дизайн до 50 экранов',
               'Глубокое исследование',
@@ -1621,7 +1621,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Landing Page',
-            price: 'от 80 000 BYN',
+            price: '7 800 BYN',
             features: [
               'Одностраничный сайт',
               'Адаптивный дизайн',
@@ -1632,7 +1632,7 @@ export class ServicesService {
           },
           {
             name: 'Корпоративный сайт',
-            price: 'от 200 000 BYN',
+            price: '19 400 BYN',
             features: [
               'До 10 страниц',
               'Профессиональный дизайн',
@@ -1644,7 +1644,7 @@ export class ServicesService {
           },
           {
             name: 'Интернет-магазин',
-            price: 'от 350 000 BYN',
+            price: '34 900 BYN',
             features: [
               'Каталог товаров',
               'Система оплаты',
@@ -1682,7 +1682,7 @@ export class ServicesService {
         packages: [
           {
             name: 'Старт',
-            price: 'от 50 000 BYN/мес',
+            price: '2 990 BYN/мес',
             features: [
               '1-2 канала привлечения',
               'Базовая аналитика',
@@ -1691,7 +1691,7 @@ export class ServicesService {
           },
           {
             name: 'Бизнес',
-            price: 'от 100 000 BYN/мес',
+            price: '5 990 BYN/мес',
             features: [
               'Мульти-канальная стратегия',
               'Расширенная аналитика',
@@ -1701,7 +1701,7 @@ export class ServicesService {
           },
           {
             name: 'Премиум',
-            price: 'от 200 000 BYN/мес',
+            price: '11 990 BYN/мес',
             features: [
               'Полный спектр каналов',
               'Персональный менеджер',

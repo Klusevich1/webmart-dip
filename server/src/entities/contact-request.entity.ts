@@ -18,6 +18,9 @@ export class ContactRequest {
   message: string;
 
   @Column({ nullable: true })
+  company: string;
+
+  @Column({ nullable: true })
   sourcePage: string;
 
   @CreateDateColumn()

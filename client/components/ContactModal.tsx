@@ -1,6 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import PhoneInput from '@/components/PhoneInput'
+import { isBelarusPhoneComplete } from '@/lib/phoneMask'
 
 interface ContactModalProps {
   isOpen: boolean
@@ -18,9 +20,15 @@ const ContactModal = ({ isOpen, onClose, serviceTitle }: ContactModalProps) => {
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (isOpen) setSubmitError(null)
+  }, [isOpen])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setSubmitError(null)
     setIsLoading(true)
 
     try {
@@ -48,9 +56,22 @@ const ContactModal = ({ isOpen, onClose, serviceTitle }: ContactModalProps) => {
           })
           onClose()
         }, 3000)
+      } else {
+        let msg = 'Не удалось отправить заявку. Попробуйте позже.'
+        try {
+          const data = await response.json()
+          if (typeof data?.message === 'string') msg = data.message
+          else if (Array.isArray(data?.message)) msg = data.message.join(', ')
+        } catch {
+          /* ignore */
+        }
+        setSubmitError(msg)
       }
     } catch (error) {
       console.error('Error submitting contact form:', error)
+      setSubmitError(
+        'Нет связи с сервером. Проверьте, что API запущен, и обновите страницу.'
+      )
     } finally {
       setIsLoading(false)
     }
@@ -93,6 +114,11 @@ const ContactModal = ({ isOpen, onClose, serviceTitle }: ContactModalProps) => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              {submitError && (
+                <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-md px-3 py-2">
+                  {submitError}
+                </p>
+              )}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Имя *
@@ -112,14 +138,14 @@ const ContactModal = ({ isOpen, onClose, serviceTitle }: ContactModalProps) => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Телефон *
                 </label>
-                <input
-                  type="tel"
+                <PhoneInput
                   name="phone"
                   value={formData.phone}
-                  onChange={handleInputChange}
+                  onChange={(phone) =>
+                    setFormData((prev) => ({ ...prev, phone }))
+                  }
                   required
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-webmart-accent focus:border-transparent"
-                  placeholder="+7 (___) ___-__-__"
                 />
               </div>
 
@@ -167,7 +193,11 @@ const ContactModal = ({ isOpen, onClose, serviceTitle }: ContactModalProps) => {
 
               <button
                 type="submit"
-                disabled={isLoading || !formData.name || !formData.phone}
+                disabled={
+                  isLoading ||
+                  !formData.name ||
+                  !isBelarusPhoneComplete(formData.phone)
+                }
                 className="w-full bg-webmart-accent hover:bg-opacity-90 text-white font-medium py-3 px-4 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Отправка...' : 'Отправить заявку'}

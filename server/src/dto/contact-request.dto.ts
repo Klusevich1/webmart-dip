@@ -19,6 +19,10 @@ export class CreateContactRequestDto {
 
   @IsString()
   @IsOptional()
+  company?: string;
+
+  @IsString()
+  @IsOptional()
   sourcePage?: string;
 }
 

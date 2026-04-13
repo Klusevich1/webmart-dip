@@ -167,7 +167,7 @@ function ServicePageContent({
 
         <div>
           {service.packages && service.packages.length > 0 && (
-            <div className="card sticky top-4">
+            <div className="card">
               <h2 className="text-2xl font-bold text-white mb-6">Тарифы</h2>
               <div className="space-y-4">
                 {service.packages.map((pkg, index) => (
@@ -236,7 +236,7 @@ export default function ServiceOrCategoryPage({ params }: PageProps) {
           // not a category, try service
         }
         const svc = await apiClient.getService(params.slug);
-        setService(svc as ServiceData);
+        setService(svc as unknown as ServiceData);
         setCategory(null);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Страница не найдена");

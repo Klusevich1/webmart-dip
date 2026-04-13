@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import PhoneInput from "@/components/PhoneInput";
+import { isBelarusPhoneComplete } from "@/lib/phoneMask";
 
 export default function ContactsPage() {
   const [formData, setFormData] = useState({
@@ -104,14 +106,14 @@ export default function ContactsPage() {
                   <label className="block text-white text-opacity-80 mb-2">
                     Телефон *
                   </label>
-                  <input
-                    type="tel"
+                  <PhoneInput
                     name="phone"
                     value={formData.phone}
-                    onChange={handleInputChange}
+                    onChange={(phone) =>
+                      setFormData((prev) => ({ ...prev, phone }))
+                    }
                     required
-                    className="input-field"
-                    placeholder="+375 (__) ___-__-__"
+                    className="input-field w-full"
                   />
                 </div>
 
@@ -149,7 +151,7 @@ export default function ContactsPage() {
                   disabled={
                     isLoading ||
                     !formData.name ||
-                    !formData.phone ||
+                    !isBelarusPhoneComplete(formData.phone) ||
                     !formData.message
                   }
                   className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
